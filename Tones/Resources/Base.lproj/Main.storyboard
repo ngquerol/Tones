@@ -188,7 +188,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="Xav-gs-TfM">
-                                    <rect key="frame" x="464" y="0.0" width="16" height="299"/>
+                                    <rect key="frame" x="464" y="0.0" width="16" height="302"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
@@ -210,13 +210,14 @@
                             </segmentedControl>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="GIi-Dd-Wva" firstAttribute="top" secondItem="UEG-7h-VHt" secondAttribute="top" priority="250" id="4wW-6o-GKi"/>
                             <constraint firstAttribute="bottom" secondItem="kZp-om-bfa" secondAttribute="bottom" constant="5" id="67Q-cI-16G"/>
                             <constraint firstItem="7q7-zz-lCH" firstAttribute="top" secondItem="GIi-Dd-Wva" secondAttribute="bottom" id="FrA-e9-FNU"/>
                             <constraint firstAttribute="trailing" secondItem="7q7-zz-lCH" secondAttribute="trailing" id="Gcm-jk-bjj"/>
                             <constraint firstItem="kZp-om-bfa" firstAttribute="top" secondItem="7q7-zz-lCH" secondAttribute="bottom" constant="5" id="aC5-eW-AwE"/>
                             <constraint firstItem="7q7-zz-lCH" firstAttribute="leading" secondItem="UEG-7h-VHt" secondAttribute="leading" id="fh0-j0-qp2"/>
                             <constraint firstAttribute="trailing" secondItem="GIi-Dd-Wva" secondAttribute="trailing" id="kFe-kk-giw"/>
-                            <constraint firstItem="GIi-Dd-Wva" firstAttribute="top" secondItem="UEG-7h-VHt" secondAttribute="top" constant="20" id="l10-DA-Jcg"/>
+                            <constraint firstItem="GIi-Dd-Wva" firstAttribute="top" secondItem="UEG-7h-VHt" secondAttribute="top" priority="750" constant="20" id="l10-DA-Jcg"/>
                             <constraint firstItem="kZp-om-bfa" firstAttribute="centerX" secondItem="UEG-7h-VHt" secondAttribute="centerX" id="pyA-ua-LfL"/>
                             <constraint firstItem="GIi-Dd-Wva" firstAttribute="leading" secondItem="UEG-7h-VHt" secondAttribute="leading" id="wRc-OB-ZFn"/>
                         </constraints>
@@ -224,6 +225,8 @@
                     <connections>
                         <outlet property="appearanceSegmentedControl" destination="kZp-om-bfa" id="csi-ap-kHl"/>
                         <outlet property="collectionView" destination="TJW-Fe-MDw" id="2sH-o3-0bz"/>
+                        <outlet property="fullscreenTopMarginConstraint" destination="4wW-6o-GKi" id="KI2-Zh-00Y"/>
+                        <outlet property="normalTopMarginConstraint" destination="l10-DA-Jcg" id="ZfT-B9-XPo"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

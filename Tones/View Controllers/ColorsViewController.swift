@@ -19,6 +19,10 @@ class ColorsViewController: NSViewController {
         }
     }
 
+    @IBOutlet var normalTopMarginConstraint: NSLayoutConstraint!
+
+    @IBOutlet var fullscreenTopMarginConstraint: NSLayoutConstraint!
+
     // MARK: Properties
 
     private let supportedAppearances: [NSAppearance.Name] = [.aqua, .darkAqua]
@@ -149,12 +153,26 @@ class ColorsViewController: NSViewController {
             options: [.initial, .new],
             changeHandler: updateAppearanceSegmentedControl(_:change:)
         )
+
+        NotificationCenter.default.addObserver(forName: NSWindow.willEnterFullScreenNotification, object: nil, queue: .main) { _ in
+            self.normalTopMarginConstraint.priority = .defaultLow
+            self.fullscreenTopMarginConstraint.priority = .defaultHigh
+        }
+
+        NotificationCenter.default.addObserver(forName: NSWindow.willExitFullScreenNotification, object: nil, queue: .main) { _ in
+            self.normalTopMarginConstraint.priority = .defaultHigh
+            self.fullscreenTopMarginConstraint.priority = .defaultLow
+        }
     }
 
     override func viewWillDisappear() {
         super.viewWillDisappear()
 
         keyValueObservation = nil
+
+        NotificationCenter.default.removeObserver(self, name: NSWindow.willEnterFullScreenNotification, object: nil)
+
+        NotificationCenter.default.removeObserver(self, name: NSWindow.willExitFullScreenNotification, object: nil)
     }
 
     // MARK: Actions
