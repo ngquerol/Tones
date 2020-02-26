@@ -15,17 +15,6 @@ class ColorCollectionViewItem: NSCollectionViewItem {
     @IBOutlet var colorView: ColorSwatchView!
     
     @IBOutlet var colorLabel: NSTextField!
-    
-    // MARK: Properties
-    
-    override var representedObject: Any? {
-        didSet {
-            guard let color = representedObject as? NSColor else { return }
-            
-            colorView.representedColor = color
-            colorLabel.stringValue = color.colorNameComponent
-        }
-    }
 }
 
 // MARK: - NSUserInterfaceItemIdentifier

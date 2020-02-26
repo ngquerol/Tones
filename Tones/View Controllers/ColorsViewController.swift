@@ -25,37 +25,115 @@ class ColorsViewController: NSViewController {
 
     private let appearanceFriendlyNames: [NSAppearance.Name: String] = [.aqua: "Light", .darkAqua: "Dark"]
 
-    private let sectionNames = ["System", "Controls"]
+    private let sectionNames = [
+        "System",
+        "Fixed",
+        "Labels",
+        "Text",
+        "Content",
+        "Menus",
+        "Tables",
+        "Controls",
+        "Windows",
+        "Highlights and Shadows",
+        "Deprecated",
+    ]
 
-    private let colors: [[NSColor]] = [
+    private let colors: [[(NSColor, String)]] = [
         [
-            .systemBlue,
-            .systemBrown,
-            .systemGray,
-            .systemGreen,
-            .systemIndigo,
-            .systemOrange,
-            .systemPink,
-            .systemPurple,
-            .systemRed,
-            .systemTeal,
-            .systemYellow,
+            (.systemBlue, "systemBlue"),
+            (.systemBrown, "systemBrown"),
+            (.systemGray, "systemGray"),
+            (.systemGreen, "systemGreen"),
+            (.systemOrange, "systemOrange"),
+            (.systemPink, "systemPink"),
+            (.systemPurple, "systemPurple"),
+            (.systemRed, "systemRed"),
+            (.systemYellow, "systemYellow"),
         ],
         [
-            .alternateSelectedControlColor,
-            .alternateSelectedControlTextColor,
-            .controlAccentColor,
-            .controlBackgroundColor,
-            .controlDarkShadowColor,
-            .controlHighlightColor,
-            .controlLightHighlightColor,
-            .controlShadowColor,
-            .controlTextColor,
-            .disabledControlTextColor,
-            .secondarySelectedControlColor,
-            .selectedControlColor,
-            .selectedControlTextColor,
-            .controlColor,
+            (.black, "black"),
+            (.blue, "blue"),
+            (.brown, "brown"),
+            (.cyan, "cyan"),
+            (.darkGray, "darkGray"),
+            (.gray, "gray"),
+            (.green, "green"),
+            (.lightGray, "lightGray"),
+            (.magenta, "magenta"),
+            (.orange, "orange"),
+            (.purple, "purple"),
+            (.red, "red"),
+            (.white, "white"),
+            (.yellow, "yellow"),
+        ],
+        [
+            (.labelColor, "labelColor"),
+            (.secondaryLabelColor, "secondaryLabelColor"),
+            (.tertiaryLabelColor, "tertiaryLabelColor"),
+            (.quaternaryLabelColor, "quaternaryLabelColor"),
+        ],
+        [
+            (.textColor, "textColor"),
+            (.placeholderTextColor, "placeholderTextColor"),
+            (.selectedTextColor, "selectedTextColor"),
+            (.textBackgroundColor, "textBackgroundColor"),
+            (.selectedTextBackgroundColor, "selectedTextBackgroundColor"),
+            (.keyboardFocusIndicatorColor, "keyboardFocusIndicatorColor"),
+            (.unemphasizedSelectedTextColor, "unemphasizedSelectedTextColor"),
+            (.unemphasizedSelectedTextBackgroundColor, "unemphasizedSelectedTextBackgroundColor"),
+        ],
+        [
+            (.linkColor, "linkColor"),
+            (.separatorColor, "separatorColor"),
+            (.selectedContentBackgroundColor, "selectedContentBackgroundColor"),
+            (.unemphasizedSelectedContentBackgroundColor, "unemphasizedSelectedContentBackgroundColor"),
+        ],
+        [
+            (.selectedMenuItemTextColor, "selectedMenuItemTextColor"),
+        ],
+        [
+            (.gridColor, "gridColor"),
+            (.headerTextColor, "headerTextColor"),
+            (NSColor.alternatingContentBackgroundColors[0], "alternatingContentBackgroundColors (even)"),
+            (NSColor.alternatingContentBackgroundColors[1], "alternatingContentBackgroundColors (odd)"),
+        ],
+        [
+            (.controlAccentColor, "controlAccentColor"),
+            (.controlColor, "controlColor"),
+            (.controlBackgroundColor, "controlBackgroundColor"),
+            (.controlTextColor, "controlTextColor"),
+            (.disabledControlTextColor, "disabledControlTextColor"),
+            (.selectedControlColor, "selectedControlColor"),
+            (.selectedControlTextColor, "selectedControlTextColor"),
+            (.alternateSelectedControlTextColor, "alternateSelectedControlTextColor"),
+            (.scrubberTexturedBackground, "scrubberTexturedBackground"),
+        ],
+        [
+            (.windowBackgroundColor, "windowBackgroundColor"),
+            (.windowFrameTextColor, "windowFrameTextColor"),
+            (.underPageBackgroundColor, "underPageBackgroundColor"),
+        ],
+        [
+            (.findHighlightColor, "findHighlightColor"),
+            (.highlightColor, "highlightColor"),
+            (.shadowColor, "shadowColor"),
+        ],
+        [
+            (.alternateSelectedControlColor, "alternateSelectedControlColor"),
+            (NSColor.controlAlternatingRowBackgroundColors[0], "controlAlternatingRowBackgroundColors (even)"),
+            (NSColor.controlAlternatingRowBackgroundColors[1], "controlAlternatingRowBackgroundColors (odd)"),
+            (.controlHighlightColor, "controlHighlightColor"),
+            (.controlLightHighlightColor, "controlLightHighlightColor"),
+            (.controlShadowColor, "controlShadowColor"),
+            (.controlDarkShadowColor, "controlDarkShadowColor"),
+            (.headerColor, "headerColor"),
+            (.knobColor, "knobColor"),
+            (.selectedKnobColor, "selectedKnobColor"),
+            (.scrollBarColor, "scrollBarColor"),
+            (.secondarySelectedControlColor, "secondarySelectedControlColor"),
+            (.selectedMenuItemColor, "selectedMenuItemColor"),
+            (.windowFrameColor, "windowFrameColor"),
         ],
     ]
 
@@ -75,7 +153,7 @@ class ColorsViewController: NSViewController {
 
     override func viewWillDisappear() {
         super.viewWillDisappear()
-        
+
         keyValueObservation = nil
     }
 
@@ -120,8 +198,11 @@ extension ColorsViewController: NSCollectionViewDataSource {
         let item = collectionView.makeItem(withIdentifier: .colorCollectionViewItem, for: indexPath)
 
         guard let collectionViewItem = item as? ColorCollectionViewItem else { return item }
+        
+        let color = colors[indexPath.section][indexPath.item]
 
-        collectionViewItem.representedObject = colors[indexPath.section][indexPath.item]
+        collectionViewItem.colorView.representedColor = color.0
+        collectionViewItem.colorLabel.stringValue = color.1
 
         return collectionViewItem
     }
