@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="16092.1" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16092.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ColorCollectionViewItem" customModule="Tones" customModuleProvider="target">
+            <connections>
+                <outlet property="colorLabel" destination="8au-DZ-qER" id="QOa-Tc-Wyk"/>
+                <outlet property="colorView" destination="LwF-i3-eTz" id="Q4Y-nq-1tw"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="125"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="LwF-i3-eTz" customClass="ColorSwatchView" customModule="Tones" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="24" width="100" height="101"/>
+                </customView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsExpansionToolTips="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8au-DZ-qER">
+                    <rect key="frame" x="0.0" y="5" width="100" height="14"/>
+                    <textFieldCell key="cell" controlSize="small" lineBreakMode="truncatingTail" allowsUndo="NO" alignment="center" placeholderString="Color name" drawsBackground="YES" id="8Yn-ZR-Xdq">
+                        <font key="font" metaFont="label" size="11"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="LwF-i3-eTz" secondAttribute="trailing" id="5oM-vN-Z1L"/>
+                <constraint firstAttribute="trailing" secondItem="8au-DZ-qER" secondAttribute="trailing" id="IbI-ZR-JFq"/>
+                <constraint firstAttribute="bottom" secondItem="8au-DZ-qER" secondAttribute="bottom" constant="5" id="PPu-y3-aII"/>
+                <constraint firstItem="LwF-i3-eTz" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="aAf-sa-1xw"/>
+                <constraint firstItem="8au-DZ-qER" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="pJR-VF-jDM"/>
+                <constraint firstItem="LwF-i3-eTz" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="uHE-bj-YXL"/>
+                <constraint firstItem="8au-DZ-qER" firstAttribute="top" secondItem="LwF-i3-eTz" secondAttribute="bottom" constant="5" id="yph-Eq-6UI"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="154"/>
+        </customView>
+        <collectionViewItem nibName="ColorCollectionViewItem" id="oFe-k0-SVu" customClass="ColorCollectionViewItem" customModule="Tones" customModuleProvider="target">
+            <connections>
+                <outlet property="colorLabel" destination="8au-DZ-qER" id="C6V-46-idf"/>
+                <outlet property="colorView" destination="LwF-i3-eTz" id="k8k-PN-x6f"/>
+                <outlet property="view" destination="c22-O7-iKe" id="TwZ-DD-5mR"/>
+            </connections>
+        </collectionViewItem>
+    </objects>
+</document>

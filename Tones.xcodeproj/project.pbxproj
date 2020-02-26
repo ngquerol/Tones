@@ -1,0 +1,376 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8DB918462406582A00CA4E41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB918452406582A00CA4E41 /* AppDelegate.swift */; };
+		8DB918482406582A00CA4E41 /* ColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB918472406582A00CA4E41 /* ColorsViewController.swift */; };
+		8DB9184A2406583000CA4E41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DB918492406583000CA4E41 /* Assets.xcassets */; };
+		8DB9184D2406583000CA4E41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DB9184B2406583000CA4E41 /* Main.storyboard */; };
+		8DB9185624065A8300CA4E41 /* ColorCollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB9185524065A8300CA4E41 /* ColorCollectionViewItem.swift */; };
+		8DB9185824065CC300CA4E41 /* ColorCollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DB9185724065CC300CA4E41 /* ColorCollectionViewItem.xib */; };
+		8DB9185C240674D600CA4E41 /* ColorSwatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB9185B240674D600CA4E41 /* ColorSwatchView.swift */; };
+		8DB918612406D34100CA4E41 /* SectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DB918602406D34100CA4E41 /* SectionHeaderView.xib */; };
+		8DB918632406D42100CA4E41 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB918622406D42100CA4E41 /* SectionHeaderView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8DB918422406582A00CA4E41 /* Tones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tones.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DB918452406582A00CA4E41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8DB918472406582A00CA4E41 /* ColorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsViewController.swift; sourceTree = "<group>"; };
+		8DB918492406583000CA4E41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8DB9184C2406583000CA4E41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8DB9184E2406583000CA4E41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DB9184F2406583000CA4E41 /* Tones.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tones.entitlements; sourceTree = "<group>"; };
+		8DB9185524065A8300CA4E41 /* ColorCollectionViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCollectionViewItem.swift; sourceTree = "<group>"; };
+		8DB9185724065CC300CA4E41 /* ColorCollectionViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorCollectionViewItem.xib; sourceTree = "<group>"; };
+		8DB9185B240674D600CA4E41 /* ColorSwatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSwatchView.swift; sourceTree = "<group>"; };
+		8DB918602406D34100CA4E41 /* SectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeaderView.xib; sourceTree = "<group>"; };
+		8DB918622406D42100CA4E41 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DB9183F2406582A00CA4E41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8DB918392406582A00CA4E41 = {
+			isa = PBXGroup;
+			children = (
+				8DB918442406582A00CA4E41 /* Tones */,
+				8DB918432406582A00CA4E41 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8DB918432406582A00CA4E41 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DB918422406582A00CA4E41 /* Tones.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8DB918442406582A00CA4E41 /* Tones */ = {
+			isa = PBXGroup;
+			children = (
+				8DB9185E2406D26A00CA4E41 /* View Controllers */,
+				8DB9185F2406D27F00CA4E41 /* Views */,
+				8DB9185D2406D24700CA4E41 /* Resources */,
+				8DB918452406582A00CA4E41 /* AppDelegate.swift */,
+				8DB918492406583000CA4E41 /* Assets.xcassets */,
+				8DB9184E2406583000CA4E41 /* Info.plist */,
+				8DB9184F2406583000CA4E41 /* Tones.entitlements */,
+			);
+			path = Tones;
+			sourceTree = "<group>";
+		};
+		8DB9185D2406D24700CA4E41 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8DB9185724065CC300CA4E41 /* ColorCollectionViewItem.xib */,
+				8DB918602406D34100CA4E41 /* SectionHeaderView.xib */,
+				8DB9184B2406583000CA4E41 /* Main.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8DB9185E2406D26A00CA4E41 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8DB918472406582A00CA4E41 /* ColorsViewController.swift */,
+				8DB9185524065A8300CA4E41 /* ColorCollectionViewItem.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		8DB9185F2406D27F00CA4E41 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8DB9185B240674D600CA4E41 /* ColorSwatchView.swift */,
+				8DB918622406D42100CA4E41 /* SectionHeaderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8DB918412406582A00CA4E41 /* Tones */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8DB918522406583000CA4E41 /* Build configuration list for PBXNativeTarget "Tones" */;
+			buildPhases = (
+				8DB9183E2406582A00CA4E41 /* Sources */,
+				8DB9183F2406582A00CA4E41 /* Frameworks */,
+				8DB918402406582A00CA4E41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tones;
+			productName = Tones;
+			productReference = 8DB918422406582A00CA4E41 /* Tones.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8DB9183A2406582A00CA4E41 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Nicolas Gaulard-Querol";
+				TargetAttributes = {
+					8DB918412406582A00CA4E41 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+				};
+			};
+			buildConfigurationList = 8DB9183D2406582A00CA4E41 /* Build configuration list for PBXProject "Tones" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8DB918392406582A00CA4E41;
+			productRefGroup = 8DB918432406582A00CA4E41 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DB918412406582A00CA4E41 /* Tones */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8DB918402406582A00CA4E41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DB918612406D34100CA4E41 /* SectionHeaderView.xib in Resources */,
+				8DB9185824065CC300CA4E41 /* ColorCollectionViewItem.xib in Resources */,
+				8DB9184A2406583000CA4E41 /* Assets.xcassets in Resources */,
+				8DB9184D2406583000CA4E41 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DB9183E2406582A00CA4E41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DB9185624065A8300CA4E41 /* ColorCollectionViewItem.swift in Sources */,
+				8DB918482406582A00CA4E41 /* ColorsViewController.swift in Sources */,
+				8DB918632406D42100CA4E41 /* SectionHeaderView.swift in Sources */,
+				8DB918462406582A00CA4E41 /* AppDelegate.swift in Sources */,
+				8DB9185C240674D600CA4E41 /* ColorSwatchView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8DB9184B2406583000CA4E41 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8DB9184C2406583000CA4E41 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8DB918502406583000CA4E41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8DB918512406583000CA4E41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		8DB918532406583000CA4E41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Tones/Tones.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = L8JTCTCWN2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Tones/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fr.ngquerol.Tones;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		8DB918542406583000CA4E41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Tones/Tones.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = L8JTCTCWN2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Tones/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = fr.ngquerol.Tones;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8DB9183D2406582A00CA4E41 /* Build configuration list for PBXProject "Tones" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DB918502406583000CA4E41 /* Debug */,
+				8DB918512406583000CA4E41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8DB918522406583000CA4E41 /* Build configuration list for PBXNativeTarget "Tones" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DB918532406583000CA4E41 /* Debug */,
+				8DB918542406583000CA4E41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8DB9183A2406582A00CA4E41 /* Project object */;
+}
