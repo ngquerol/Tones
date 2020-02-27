@@ -16,6 +16,7 @@
 		8DB9185C240674D600CA4E41 /* ColorSwatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB9185B240674D600CA4E41 /* ColorSwatchView.swift */; };
 		8DB918612406D34100CA4E41 /* SectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DB918602406D34100CA4E41 /* SectionHeaderView.xib */; };
 		8DB918632406D42100CA4E41 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB918622406D42100CA4E41 /* SectionHeaderView.swift */; };
+		8DFA46D02407F30700E30BD3 /* ColorDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFA46CF2407F30700E30BD3 /* ColorDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		8DB9185B240674D600CA4E41 /* ColorSwatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSwatchView.swift; sourceTree = "<group>"; };
 		8DB918602406D34100CA4E41 /* SectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeaderView.xib; sourceTree = "<group>"; };
 		8DB918622406D42100CA4E41 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
+		8DFA46CF2407F30700E30BD3 /* ColorDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 		8DB918442406582A00CA4E41 /* Tones */ = {
 			isa = PBXGroup;
 			children = (
+				8DFA46CE2407F2F400E30BD3 /* Data */,
 				8DB9185E2406D26A00CA4E41 /* View Controllers */,
 				8DB9185F2406D27F00CA4E41 /* Views */,
 				8DB9185D2406D24700CA4E41 /* Resources */,
@@ -100,6 +103,14 @@
 				8DB918622406D42100CA4E41 /* SectionHeaderView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		8DFA46CE2407F2F400E30BD3 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8DFA46CF2407F30700E30BD3 /* ColorDataSource.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +187,7 @@
 			files = (
 				8DB9185624065A8300CA4E41 /* ColorCollectionViewItem.swift in Sources */,
 				8DB918482406582A00CA4E41 /* ColorsViewController.swift in Sources */,
+				8DFA46D02407F30700E30BD3 /* ColorDataSource.swift in Sources */,
 				8DB918632406D42100CA4E41 /* SectionHeaderView.swift in Sources */,
 				8DB918462406582A00CA4E41 /* AppDelegate.swift in Sources */,
 				8DB9185C240674D600CA4E41 /* ColorSwatchView.swift in Sources */,
