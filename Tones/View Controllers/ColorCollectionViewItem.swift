@@ -10,15 +10,11 @@ import AppKit
 
 class ColorCollectionViewItem: NSCollectionViewItem {
     
+    static let identifier = NSUserInterfaceItemIdentifier(rawValue: "ColorCollectionViewItem")
+    
     // MARK: IBOutlets
     
     @IBOutlet var colorView: ColorSwatchView!
     
     @IBOutlet var colorLabel: NSTextField!
-}
-
-// MARK: - NSUserInterfaceItemIdentifier
-
-extension NSUserInterfaceItemIdentifier {
-    static let colorCollectionViewItem = NSUserInterfaceItemIdentifier(rawValue: "ColorCollectionViewItem")
 }

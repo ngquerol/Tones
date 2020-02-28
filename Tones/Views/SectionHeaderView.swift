@@ -9,15 +9,12 @@
 import AppKit
 
 class SectionHeaderView: NSView {
+    
+    static let identifier = NSUserInterfaceItemIdentifier(rawValue: "SectionHeaderView")
+    
     // MARK: IBOutlets
 
     @IBOutlet var sectionTitleLabel: NSTextField!
 
     @IBOutlet var sectionItemCountLabel: NSTextField!
-}
-
-// MARK: - NSUserInterfaceItemIdentifier
-
-extension NSUserInterfaceItemIdentifier {
-    static let sectionHeaderView = NSUserInterfaceItemIdentifier(rawValue: "SectionHeaderView")
 }

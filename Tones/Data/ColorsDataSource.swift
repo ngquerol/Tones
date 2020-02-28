@@ -18,7 +18,7 @@ class ColorsDataSource: NSObject, NSCollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
-        let item = collectionView.makeItem(withIdentifier: .colorCollectionViewItem, for: indexPath)
+        let item = collectionView.makeItem(withIdentifier: ColorCollectionViewItem.identifier, for: indexPath)
 
         guard let collectionViewItem = item as? ColorCollectionViewItem else { return item }
 
@@ -33,7 +33,7 @@ class ColorsDataSource: NSObject, NSCollectionViewDataSource {
     func collectionView(_ collectionView: NSCollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> NSView {
         let view = collectionView.makeSupplementaryView(
             ofKind: kind,
-            withIdentifier: .sectionHeaderView,
+            withIdentifier: SectionHeaderView.identifier,
             for: indexPath
         )
 
