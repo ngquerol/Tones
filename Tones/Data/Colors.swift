@@ -71,6 +71,8 @@ struct Colors {
                 Color(value: .systemPurple, name: "systemPurple"),
                 Color(value: .systemRed, name: "systemRed"),
                 Color(value: .systemYellow, name: "systemYellow"),
+                Color(value: .systemTeal, name: "systemTeal"),
+                Color(value: .systemIndigo, name: "systemIndigo"),
             ]
             case .fixed: return [
                 Color(value: .black, name: "black"),
