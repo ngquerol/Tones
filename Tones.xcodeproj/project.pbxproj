@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D1AAA202409679E009AF196 /* ColorsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1AAA1F2409679E009AF196 /* ColorsDataSource.swift */; };
 		8DB918462406582A00CA4E41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB918452406582A00CA4E41 /* AppDelegate.swift */; };
 		8DB918482406582A00CA4E41 /* ColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB918472406582A00CA4E41 /* ColorsViewController.swift */; };
 		8DB9184A2406583000CA4E41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DB918492406583000CA4E41 /* Assets.xcassets */; };
@@ -16,10 +17,11 @@
 		8DB9185C240674D600CA4E41 /* ColorSwatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB9185B240674D600CA4E41 /* ColorSwatchView.swift */; };
 		8DB918612406D34100CA4E41 /* SectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DB918602406D34100CA4E41 /* SectionHeaderView.xib */; };
 		8DB918632406D42100CA4E41 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB918622406D42100CA4E41 /* SectionHeaderView.swift */; };
-		8DFA46D02407F30700E30BD3 /* ColorDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFA46CF2407F30700E30BD3 /* ColorDataSource.swift */; };
+		8DFA46D02407F30700E30BD3 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFA46CF2407F30700E30BD3 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D1AAA1F2409679E009AF196 /* ColorsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsDataSource.swift; sourceTree = "<group>"; };
 		8DB918422406582A00CA4E41 /* Tones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tones.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DB918452406582A00CA4E41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DB918472406582A00CA4E41 /* ColorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsViewController.swift; sourceTree = "<group>"; };
@@ -32,7 +34,7 @@
 		8DB9185B240674D600CA4E41 /* ColorSwatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSwatchView.swift; sourceTree = "<group>"; };
 		8DB918602406D34100CA4E41 /* SectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeaderView.xib; sourceTree = "<group>"; };
 		8DB918622406D42100CA4E41 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
-		8DFA46CF2407F30700E30BD3 /* ColorDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDataSource.swift; sourceTree = "<group>"; };
+		8DFA46CF2407F30700E30BD3 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +110,8 @@
 		8DFA46CE2407F2F400E30BD3 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				8DFA46CF2407F30700E30BD3 /* ColorDataSource.swift */,
+				8DFA46CF2407F30700E30BD3 /* Colors.swift */,
+				8D1AAA1F2409679E009AF196 /* ColorsDataSource.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -187,7 +190,8 @@
 			files = (
 				8DB9185624065A8300CA4E41 /* ColorCollectionViewItem.swift in Sources */,
 				8DB918482406582A00CA4E41 /* ColorsViewController.swift in Sources */,
-				8DFA46D02407F30700E30BD3 /* ColorDataSource.swift in Sources */,
+				8DFA46D02407F30700E30BD3 /* Colors.swift in Sources */,
+				8D1AAA202409679E009AF196 /* ColorsDataSource.swift in Sources */,
 				8DB918632406D42100CA4E41 /* SectionHeaderView.swift in Sources */,
 				8DB918462406582A00CA4E41 /* AppDelegate.swift in Sources */,
 				8DB9185C240674D600CA4E41 /* ColorSwatchView.swift in Sources */,

@@ -11,7 +11,11 @@ import AppKit
 class ColorsViewController: NSViewController {
     // MARK: IBOutlets
 
-    @IBOutlet var collectionView: NSCollectionView!
+    @IBOutlet var collectionView: NSCollectionView! {
+        didSet {
+            collectionView.dataSource = dataSource
+        }
+    }
 
     @IBOutlet var appearanceSegmentedControl: NSSegmentedControl! {
         didSet {
@@ -32,6 +36,8 @@ class ColorsViewController: NSViewController {
     private let supportedAppearances: [NSAppearance.Name] = [.aqua, .darkAqua]
 
     private let friendlyAppearanceNames: [NSAppearance.Name: String] = [.aqua: "Light", .darkAqua: "Dark"]
+
+    private let dataSource: NSCollectionViewDataSource = ColorsDataSource()
 
     private var keyValueObservation: NSKeyValueObservation?
 
@@ -88,47 +94,5 @@ class ColorsViewController: NSViewController {
                 appearanceSegmentedControl.setLabel(friendlyAppearanceNames[appearance, default: appearance.rawValue], forSegment: i)
             }
         }
-    }
-}
-
-// MARK: - NSCollectionViewDataSource
-
-extension ColorsViewController: NSCollectionViewDataSource {
-    func numberOfSections(in _: NSCollectionView) -> Int {
-        ColorDataSource.ColorSection.allCases.count
-    }
-
-    func collectionView(_: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
-        ColorDataSource[section].count
-    }
-
-    func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
-        let item = collectionView.makeItem(withIdentifier: .colorCollectionViewItem, for: indexPath)
-
-        guard let collectionViewItem = item as? ColorCollectionViewItem else { return item }
-
-        let (color, name) = ColorDataSource[indexPath]
-
-        collectionViewItem.colorView.representedColor = color
-        collectionViewItem.colorLabel.stringValue = name
-
-        return collectionViewItem
-    }
-
-    func collectionView(_ collectionView: NSCollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> NSView {
-        let view = collectionView.makeSupplementaryView(
-            ofKind: kind,
-            withIdentifier: .sectionHeaderView,
-            for: indexPath
-        )
-
-        guard let sectionHeaderView = view as? SectionHeaderView else { return view }
-
-        let category = ColorDataSource.ColorSection.allCases[indexPath.section]
-
-        sectionHeaderView.sectionTitleLabel.stringValue = category.description
-        sectionHeaderView.sectionItemCountLabel.stringValue = "\(category.colors.count) color(s)"
-
-        return sectionHeaderView
     }
 }
