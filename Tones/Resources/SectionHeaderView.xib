@@ -15,7 +15,7 @@
                 <visualEffectView blendingMode="behindWindow" material="headerView" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="HSb-qT-3EH">
                     <rect key="frame" x="0.0" y="0.0" width="480" height="25"/>
                     <subviews>
-                        <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="YBu-JK-WZS">
+                        <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="FsK-WA-Fgd">
                             <rect key="frame" x="0.0" y="22" width="480" height="5"/>
                         </box>
                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsExpansionToolTips="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRs-eC-2Ck">
@@ -41,15 +41,15 @@
                     <constraints>
                         <constraint firstItem="IFo-NC-rNM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JRs-eC-2Ck" secondAttribute="trailing" constant="10" id="1Zf-ie-iQw"/>
                         <constraint firstItem="JRs-eC-2Ck" firstAttribute="centerY" secondItem="HSb-qT-3EH" secondAttribute="centerY" id="3yj-tR-Iyc"/>
-                        <constraint firstItem="YBu-JK-WZS" firstAttribute="top" secondItem="HSb-qT-3EH" secondAttribute="top" id="4am-gd-caA"/>
+                        <constraint firstItem="FsK-WA-Fgd" firstAttribute="leading" secondItem="HSb-qT-3EH" secondAttribute="leading" id="Bmr-Sd-VtO"/>
                         <constraint firstItem="JRs-eC-2Ck" firstAttribute="leading" secondItem="HSb-qT-3EH" secondAttribute="leading" constant="5" id="DpT-Ns-lbA"/>
                         <constraint firstItem="mIb-Ii-Ibf" firstAttribute="leading" secondItem="HSb-qT-3EH" secondAttribute="leading" id="LME-rq-aZ7"/>
                         <constraint firstItem="IFo-NC-rNM" firstAttribute="centerY" secondItem="HSb-qT-3EH" secondAttribute="centerY" id="Qm9-De-tOH"/>
                         <constraint firstAttribute="trailing" secondItem="mIb-Ii-Ibf" secondAttribute="trailing" id="SG6-kS-rsV"/>
-                        <constraint firstItem="YBu-JK-WZS" firstAttribute="leading" secondItem="HSb-qT-3EH" secondAttribute="leading" id="Zed-fT-x0l"/>
+                        <constraint firstItem="FsK-WA-Fgd" firstAttribute="top" secondItem="HSb-qT-3EH" secondAttribute="top" id="T82-zC-FO5"/>
                         <constraint firstAttribute="bottom" secondItem="mIb-Ii-Ibf" secondAttribute="bottom" id="bV3-fr-lht"/>
+                        <constraint firstAttribute="trailing" secondItem="FsK-WA-Fgd" secondAttribute="trailing" id="dzd-vL-Bso"/>
                         <constraint firstAttribute="height" constant="25" id="kaI-zE-5EK"/>
-                        <constraint firstAttribute="trailing" secondItem="YBu-JK-WZS" secondAttribute="trailing" id="nCc-g0-Ko2"/>
                         <constraint firstAttribute="trailing" secondItem="IFo-NC-rNM" secondAttribute="trailing" constant="5" id="xWm-nq-m33"/>
                     </constraints>
                 </visualEffectView>
