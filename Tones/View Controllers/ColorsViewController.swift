@@ -25,19 +25,18 @@ class ColorsViewController: NSViewController {
 
     // MARK: Properties
 
-    var dataSource = ColorsDataSource(colors: Color.all)
+    let dataSource = ColorsDataSource(colors: Color.all)
     
     // MARK: Segue
 
     override func prepare(for segue: NSStoryboardSegue, sender _: Any?) {
         guard
             segue.identifier == FindColorsSegue.identifier,
-            let colorsViewController = segue.sourceController as? ColorsViewController,
             let findViewController = segue.destinationController as? FindViewController
         else {
             return
         }
         
-        findViewController.originalColors = colorsViewController.dataSource.colors
+        findViewController.originalColors = dataSource.colors
     }
 }

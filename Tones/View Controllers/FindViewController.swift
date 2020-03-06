@@ -14,6 +14,8 @@
 
 import AppKit
 
+private typealias ColorPredicate = (Color) -> Bool
+
 class FindViewController: NSViewController {
     // MARK: IBOutlets
 
@@ -36,16 +38,7 @@ class FindViewController: NSViewController {
     @IBAction func userDidTypeInSearchField(_ sender: NSSearchField) {
         guard !sender.stringValue.isEmpty else { return }
 
-        let results = originalColors.filter { color in
-            color.name.range(
-                of: sender.stringValue,
-                options: [.caseInsensitive, .diacriticInsensitive],
-                range: color.name.startIndex ..< color.name.endIndex,
-                locale: .autoupdatingCurrent
-            ) != nil
-        }
-
-        colorsViewController?.dataSource.colors = results
+        colorsViewController?.dataSource.colors = filterColors(from: sender.stringValue)
         colorsViewController?.collectionView.reloadData()
     }
 
@@ -69,6 +62,29 @@ class FindViewController: NSViewController {
 
     override func cancelOperation(_: Any?) {
         presentingViewController?.dismiss(self)
+    }
+
+    private func filterColors(from searchTerm: String) -> [Color] {
+        let predicates: [ColorPredicate] = [
+            { searchTerm.matchesApproximately($0.name) },
+            { searchTerm.matchesApproximately($0.category.description) },
+        ]
+
+        // TODO: short-circuit predicates evaluation
+        return originalColors.filter { color in predicates.reduce(false) { $0 || $1(color) } }
+    }
+}
+
+// MARK: - String.matchesApproximately(_:)
+
+private extension String {
+    func matchesApproximately(_ string: String) -> Bool {
+        string.range(
+            of: self,
+            options: [.caseInsensitive, .diacriticInsensitive],
+            range: string.startIndex ..< string.endIndex,
+            locale: .autoupdatingCurrent
+        ) != nil
     }
 }
 
