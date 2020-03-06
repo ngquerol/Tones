@@ -13,39 +13,32 @@ class ColorSwatchView: NSView {
 
     var representedColor: NSColor?
 
+    // MARK: Initializers
+
+    override init(frame frameRect: NSRect) {
+        super.init(frame: frameRect)
+        commonInit()
+    }
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        commonInit()
+    }
+
+    private func commonInit() {
+        wantsLayer = true
+        layerContentsRedrawPolicy = .onSetNeedsDisplay
+        translatesAutoresizingMaskIntoConstraints = false
+    }
+
     // MARK: Methods
 
-    override func draw(_ dirtyRect: NSRect) {
-        guard
-            let color = representedColor,
-            let cgContext = NSGraphicsContext.current?.cgContext
-        else {
-            return
-        }
+    override var wantsUpdateLayer: Bool { true }
 
-        let roundRectPath = CGPath(
-            roundedRect: dirtyRect.insetBy(
-                dx: 10,
-                dy: 10
-            ),
-            cornerWidth: 5,
-            cornerHeight: 5,
-            transform: nil
-        )
-
-        cgContext.saveGState()
-
-        cgContext.addPath(roundRectPath)
-        cgContext.clip()
-
-        cgContext.setFillColor(color.cgColor)
-        cgContext.fill(dirtyRect)
-        
-        cgContext.addPath(roundRectPath)
-        cgContext.setLineWidth(3)
-        cgContext.setStrokeColor(color.withSystemEffect(.pressed).cgColor)
-        cgContext.strokePath()
-
-        cgContext.restoreGState()
+    override func updateLayer() {
+        layer?.cornerRadius = 5
+        layer?.borderWidth = 1
+        layer?.borderColor = representedColor?.withSystemEffect(.pressed).cgColor
+        layer?.backgroundColor = representedColor?.cgColor
     }
 }
