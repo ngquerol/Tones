@@ -157,6 +157,7 @@
 				8DB9183E2406582A00CA4E41 /* Sources */,
 				8DB9183F2406582A00CA4E41 /* Frameworks */,
 				8DB918402406582A00CA4E41 /* Resources */,
+				8D79C0772410F6330006CED8 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -213,6 +214,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8D79C0772410F6330006CED8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftformat >/dev/null; then\n  swiftformat --lint --lenient .\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8DB9183E2406582A00CA4E41 /* Sources */ = {

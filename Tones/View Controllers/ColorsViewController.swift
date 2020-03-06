@@ -18,15 +18,15 @@ class ColorsViewController: NSViewController {
     }
 
     // MARK: Actions
-    
-    @IBAction func findColor(_ NSMenuItem: Any) {
+
+    @IBAction func findColor(_: Any) {
         performSegue(withIdentifier: FindColorsSegue.identifier, sender: self)
     }
 
     // MARK: Properties
 
     let dataSource = ColorsDataSource(colors: Color.all)
-    
+
     // MARK: Segue
 
     override func prepare(for segue: NSStoryboardSegue, sender _: Any?) {
@@ -36,7 +36,7 @@ class ColorsViewController: NSViewController {
         else {
             return
         }
-        
+
         findViewController.originalColors = dataSource.colors
     }
 }

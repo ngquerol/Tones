@@ -24,7 +24,7 @@ class FindViewController: NSViewController {
             searchField.delegate = self
         }
     }
-    
+
     // MARK: Properties
 
     var originalColors: [Color] = []
@@ -45,11 +45,11 @@ class FindViewController: NSViewController {
     @IBAction func findColor(_: Any) { /* noop */ }
 
     // MARK: View lifecycle
-    
+
     override func viewDidAppear() {
         view.window?.makeFirstResponder(self)
     }
-    
+
     override func viewWillDisappear() {
         view.window?.makeFirstResponder(colorsViewController)
     }

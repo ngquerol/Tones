@@ -10,8 +10,8 @@ import AppKit
 
 class ContainerViewController: NSSplitViewController {
     // MARK: NSSplitViewDelegate
-        
+
     override func splitView(_: NSSplitView, effectiveRect _: NSRect, forDrawnRect _: NSRect, ofDividerAt _: Int) -> NSRect {
-        return .zero
+        .zero
     }
 }

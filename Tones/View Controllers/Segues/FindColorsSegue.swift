@@ -14,7 +14,7 @@ class FindColorsSegue: NSStoryboardSegue {
     override var identifier: NSStoryboardSegue.Identifier {
         FindColorsSegue.identifier
     }
-    
+
     private let animator = SlideInViewControllerPresentationAnimator()
 
     override func perform() {
@@ -24,7 +24,7 @@ class FindColorsSegue: NSStoryboardSegue {
         else {
             return
         }
-        
+
         sourceController.present(destinationController, animator: animator)
     }
 }
@@ -36,10 +36,10 @@ private class SlideInViewControllerPresentationAnimator: NSObject, NSViewControl
         else {
             return
         }
-                
+
         containerViewController.insertSplitViewItem(NSSplitViewItem(viewController: viewController), at: 0)
     }
-    
+
     func animateDismissal(of viewController: NSViewController, from fromViewController: NSViewController) {
         guard
             let containerViewController = fromViewController.parent as? NSSplitViewController,
@@ -47,7 +47,7 @@ private class SlideInViewControllerPresentationAnimator: NSObject, NSViewControl
         else {
             return
         }
-        
+
         containerViewController.removeSplitViewItem(viewControllerSplitViewItem)
     }
 }
